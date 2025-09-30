@@ -1,0 +1,7 @@
+Flask
+docx
+pandas
+groq
+openpyxl
+reportlab
+werkzeug

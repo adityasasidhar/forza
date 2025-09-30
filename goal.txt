@@ -1,0 +1,12 @@
+To confirm the first task, here is the planned step-by-step flow with a short explanation:
+
+1) Upload Analytical Balance Sheet – The user uploads the detailed balance sheet (Excel or PDF) when the company files in micro or abbreviated format.
+👉 Allow the user to upload up to 5 balance sheets (not only one).
+
+2) AI Mapping – The platform automatically reads each accounting item (Roman numerals and letters) and identifies them.
+
+3) Reclassification – These items are then placed into the correct EU-compliant structure (Article 2424), even if some items are missing or grouped differently.
+
+4) Validation Check – The system ensures that Assets = Liabilities, applying a rounding rule (e.g., <1 euro) if small differences exist.
+
+5) Final Output – The user receives a reclassified Excel sheet, ready to be used for financial analysis and reporting.
