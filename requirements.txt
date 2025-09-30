@@ -1,7 +1,8 @@
 Flask
-docx
-pandas
+python-docx
 groq
-openpyxl
+pydantic
+pandas
 reportlab
-werkzeug
+openpyxl
+Werkzeug

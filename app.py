@@ -3,12 +3,13 @@ import os
 from werkzeug.utils import secure_filename
 from tools import read_docx, classify_balance_sheet, extract_json, write_to_pdf
 
-UPLOAD_FOLDER = 'data'
+# Use /tmp for Vercel (serverless environment)
+UPLOAD_FOLDER = '/tmp'
 ALLOWED_EXTENSIONS = {'docx'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.secret_key = 'supersecretkey'
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'supersecretkey')
 
 # Ensure upload folder exists
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -52,5 +53,5 @@ def download_pdf():
         flash('PDF not found. Please upload and process a file first.')
         return redirect(url_for('upload_file'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Export app for Vercel
+app = app
